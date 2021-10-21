@@ -33,6 +33,8 @@ for line in fileinput.input():
   plaintext = line
   break
 plaintext = plaintext.replace('\n', '')
+if plaintext == '""':
+  plaintext = ''
 
 # Convirtiendo texto a valor en int (ASCII)
 plaintext_encoded = plaintext.encode()
